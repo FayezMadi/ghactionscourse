@@ -12,7 +12,9 @@ on:
 #sitech-nafith/shared-workflows/.github/workflows/secret-scan.yml@main
 jobs:
   secret-scan:
-    uses: ./.github/workflows/secret-scan.yml
+    uses: ghactionscourse/ghactionscourse/.github/workflows/secret-scan.yml@main
+
+#./.github/workflows/secret-scan.yml
 
 #ghactionscourse/.github/workflows/secret-scan.yml@main
 
