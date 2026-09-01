@@ -1,15 +1,14 @@
 name: CI
 
-# Reference implementation using sitech-nafith/shared-workflows.
-# See: https://github.com/sitech-nafith/shared-workflows
-
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
 
-#sitech-nafith/shared-workflows/.github/workflows/secret-scan.yml@main
 jobs:
   secret-scan:
-    uses: ./.github/workflows/secret-scan.yml
+    permissions:
+      contents: read
+      security-events: write   # Add this line to grant the nested job write permissions
+    uses: FayezMadi/ghactionscourse/.github/workflows/secret-scan.yml@main
