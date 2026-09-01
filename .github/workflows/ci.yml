@@ -9,7 +9,8 @@ on:
   pull_request:
     branches: [main]
 
+#sitech-nafith/shared-workflows/.github/workflows/secret-scan.yml@main
 jobs:
   secret-scan:
-    uses: sitech-nafith/shared-workflows/.github/workflows/secret-scan.yml@main
+    uses: ghactionscourse/.github/workflows/secret-scan.yml@main
 
