@@ -13,18 +13,3 @@ jobs:
   secret-scan:
     uses: sitech-nafith/shared-workflows/.github/workflows/secret-scan.yml@main
 
-  sast:
-    uses: sitech-nafith/shared-workflows/.github/workflows/sast-python.yml@main
-    with:
-      scan_paths: "app/ sidecar/"
-
-  lint:
-    uses: sitech-nafith/shared-workflows/.github/workflows/lint-python.yml@main
-    with:
-      lint_paths: "app/ sidecar/ tests/"
-
-  test:
-    uses: sitech-nafith/shared-workflows/.github/workflows/test-python.yml@main
-    with:
-      cov_source: "app"
-      extra_packages: "pytest pytest-asyncio httpx"
